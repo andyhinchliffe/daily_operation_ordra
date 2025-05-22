@@ -20,14 +20,23 @@
       </p>
 
       <div class="mt-6 flex flex-wrap gap-4">
+        <style>
+                    html {
+                    scroll-behavior: smooth;
+                    }
+            </style>
         <a
-          href="#"
+          href="#explore"
           class="inline-block rounded-md bg-gray-800 px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-gray-900"
         >
-          Get Started
+          Latest Information
         </a>
+
+        <?php 
+            $button_url = get_theme_mod( 'front_page_button_url', get_permalink( get_page_by_path('about') ) );
+        ?>
         <a
-          href="#"
+          href="<?php echo esc_url( $button_url ); ?>"
           class="inline-block rounded-md border border-gray-200 px-6 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-50 hover:text-gray-900"
         >
           Learn More
@@ -56,7 +65,7 @@
 
 <!-- THE LOOP ---------------- -->
 <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
-  <section class="flex flex-wrap gap-6 justify-center sm:justify-between">
+  <section id="explore" class="flex flex-wrap gap-6 justify-center sm:justify-between">
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <article class="w-80 rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition">
@@ -111,12 +120,10 @@
       <div>
         <div class="max-w-xl">
           <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <?php echo esc_html( get_theme_mod( 'front_page_title', 'Edit this title in the Customizer.' ) ); ?>
           </h2>
           <p class="mt-6 text-lg text-gray-700">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloremque saepe
-            architecto maiores repudiandae amet perferendis repellendus, reprehenderit voluptas
-            sequi.
+            <?php echo esc_html( get_theme_mod( 'front_page_info_text', 'Edit this text in the Customizer along with uploading a new image for this section.' ) ); ?>
           </p>
         </div>
       </div>
@@ -124,7 +131,7 @@
       <!-- Image -->
       <div>
         <img
-          src="<?php echo get_template_directory_uri(); ?>/images/placeholder.jpg"
+          src="<?php echo esc_url( get_theme_mod( 'front_page_image', get_template_directory_uri() . '/images/placeholder.jpg' ) ); ?>"
           alt="Decorative nature scene"
           class="w-full rounded-2xl shadow-lg"
         />
@@ -132,6 +139,7 @@
     </div>
   </div>
 </section>
+
 
 
 
