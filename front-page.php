@@ -56,9 +56,9 @@
  <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
 
 
-<section class="flex  gap-10 ">
+<section class="flex flex-wrap gap-6 sm:justify-center justify-between">
 
-    <article class="rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition">
+    <article class="rounded-xl w-80 overflow-hidden bg-white shadow-sm hover:shadow-lg transition">
   
   <!-- Image -->
   <img
@@ -92,7 +92,7 @@
 
 <!-- --------CARD  ----     -->
 
-<article class="rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition">
+<article class="w-80 rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition">
   
   <!-- Image -->
   <img
@@ -121,7 +121,7 @@
 </article>
 
 
-<article class="rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition">
+<article class="w-80 rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition">
   
   <!-- Image -->
   <img

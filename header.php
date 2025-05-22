@@ -37,7 +37,7 @@
                     }
                 }
                 ?>
-                <span class="text-gray-600 text-sm font-medium tracking-wide"><?php bloginfo('name'); ?></span>
+                <span class="text-gray-600 text-sm "><?php bloginfo('name'); ?></span>
             </a>
         </div>
 
