@@ -14,53 +14,69 @@ Text Domain: daily_operation_ordra
 Domain Path: /languages
 Tags: one-column, two-columns, custom-background, custom-logo, custom-menu, featured-images, translation-ready, blog, accessibility-ready, responsive-layout, minimal, corporate
 
-
 This theme is distributed under the terms of the GNU General Public License (GPL), version 2 or later.
 Copyright (C) 2025 Daily Operation Designs. All Rights Reserved.
 */
-
 
 /* Add your theme's custom styles below this comment */
 
 /* WordPress Caption Styles */
 .wp-caption {
-    @apply relative overflow-hidden max-w-full border border-gray-300 bg-gray-50;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    border: 1px solid #D1D5DB; /* Tailwind gray-300 */
+    background-color: #F9FAFB; /* Tailwind gray-50 */
     margin-bottom: 1rem;
     padding: 0.5rem;
 }
 
 .wp-caption-text {
-    @apply text-sm text-gray-600 text-center mt-2;
+    font-size: 0.875rem; /* text-sm */
+    color: #4B5563; /* gray-600 */
+    text-align: center;
+    margin-top: 0.5rem; /* mt-2 */
 }
 
 /* Sticky Class */
 .sticky {
-    @apply sticky top-0;
+    position: sticky;
+    top: 0;
 }
 
 /* Gallery Caption Styles */
 .gallery-caption {
-    @apply text-sm text-gray-600 text-center mt-2;
+    font-size: 0.875rem; /* text-sm */
+    color: #4B5563; /* gray-600 */
+    text-align: center;
+    margin-top: 0.5rem; /* mt-2 */
 }
 
 /* Post Author Styles */
 .bypostauthor {
-    @apply text-sm text-gray-600;
+    font-size: 0.875rem; /* text-sm */
+    color: #4B5563; /* gray-600 */
 }
 
 /* Image Alignments */
 .alignright {
-    @apply float-right ml-4;
+    float: right;
+    margin-left: 1rem; /* ml-4 */
 }
 
 .alignleft {
-    @apply float-left mr-4;
+    float: left;
+    margin-right: 1rem; /* mr-4 */
 }
 
 .aligncenter {
-    @apply mx-auto block max-w-full;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
 }
 
+/* Screen Reader Text */
 .screen-reader-text {
     position: absolute;
     width: 1px;
@@ -71,14 +87,13 @@ Copyright (C) 2025 Daily Operation Designs. All Rights Reserved.
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
-  }
-  
-  .screen-reader-text:focus {
+}
+
+.screen-reader-text:focus {
     position: static;
     width: auto;
     height: auto;
     margin: 0;
     clip: auto;
     white-space: normal;
-  }
-  
+}
