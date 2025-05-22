@@ -45,17 +45,20 @@
     </div>
 
     <!-- Image Content -->
-    <div class="mt-10 md:mt-0">
-      <div class="grid gap-4">
-        <img
-          src="<?php echo get_template_directory_uri(); ?>/images/image1.jpg"
-          alt="Product demo or dashboard screenshot"
-          class="w-full rounded-2xl object-cover "
-        />
-      </div>
-    </div>
-    
+<?php
+  $image_choice = get_theme_mod( 'front_page_image_choice', 'image1.webp' );
+  $image_path = esc_url( get_template_directory_uri() . '/images/' . $image_choice );
+?>
+<div class="mt-10 md:mt-0">
+  <div class="grid gap-4">
+    <img
+      src="<?php echo $image_path; ?>"
+      alt="Product demo or dashboard screenshot"
+      class="w-full rounded-2xl object-cover"
+    />
   </div>
+</div>
+
 </section>
 
 
@@ -79,7 +82,7 @@
           />
         <?php else : ?>
           <img
-            src="<?php echo get_template_directory_uri(); ?>/images/placeholder2.jpg"
+            src="<?php echo get_template_directory_uri(); ?>/images/placeholder2.webp"
             alt="Placeholder image"
             class="w-full h-56 object-cover hover:scale-105 transition"
           />
@@ -131,7 +134,7 @@
       <!-- Image -->
       <div>
         <img
-          src="<?php echo esc_url( get_theme_mod( 'front_page_image', get_template_directory_uri() . '/images/placeholder.jpg' ) ); ?>"
+          src="<?php echo esc_url( get_theme_mod( 'front_page_image', get_template_directory_uri() . '/images/placeholder.webp' ) ); ?>"
           alt="Decorative nature scene"
           class="w-full rounded-2xl shadow-lg"
         />

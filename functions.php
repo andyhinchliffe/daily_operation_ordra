@@ -91,6 +91,31 @@ function daily_operation_ordra_customize_register( $wp_customize ) {
         'section'  => 'front_page_section',
         'settings' => 'front_page_image',
     ) ) );
+
+    // Predefined image selector for front page
+$wp_customize->add_setting( 'front_page_image_choice', array(
+    'default'           => 'image1.webp',
+    'sanitize_callback' => 'sanitize_text_field',
+) );
+
+$wp_customize->add_control( 'front_page_image_choice_control', array(
+    'label'    => __( 'Front Page Image (Choose from Theme Images)', 'daily_operation_ordra' ),
+    'section'  => 'front_page_section',
+    'settings' => 'front_page_image_choice',
+    'type'     => 'select',
+    'choices'  => array(
+        'image1.webp'  => 'Image 1',
+        'image2.webp'  => 'Image 2',
+        'image3.webp'  => 'Image 3',
+        'image4.webp'  => 'Image 4',
+        'image5.webp'  => 'Image 5',
+        'image6.webp'  => 'Image 6',
+        'image7.webp'  => 'Image 7',
+        'image8.webp'  => 'Image 8',
+        'image9.webp'  => 'Image 9',
+        'image10.webp' => 'Image 10',
+    ),
+) );
 }
 add_action( 'customize_register', 'daily_operation_ordra_customize_register' );
 
