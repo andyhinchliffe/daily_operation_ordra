@@ -16,6 +16,8 @@
   <!-- wp_body_open Hook -->
   <?php wp_body_open(); ?>
 
+  <div id="page" class="min-h-screen flex flex-col">
+
   <!-- Header -->
   <header class="bg-white">
   <div class="mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">

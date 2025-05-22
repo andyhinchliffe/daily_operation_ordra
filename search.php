@@ -2,13 +2,12 @@
 
 
 <body>
-<main class="bg-white py-16 flex-grow">    
-
-
-
-
+    <main class="bg-white py-16 flex-grow">
     
-    
+
+
+
+
 
 
 
@@ -17,6 +16,9 @@
 
 <!-- THE LOOP ---------------- -->
 <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-extrabold text-gray-900 mb-6">
+        Search Results for: "<?php echo get_search_query(); ?>"
+      </h1>
   <section class="flex flex-wrap gap-6 justify-center sm:justify-between">
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -55,7 +57,9 @@
         </div>
       </article>
     <?php endwhile; else : ?>
-      <p class="text-center w-full text-gray-500">No posts found.</p>
+      <p class="text-center w-full text-gray-500">
+  No results found for "<?php echo get_search_query(); ?>". Please try another search.
+</p>
     <?php endif; ?>
 
   </section>

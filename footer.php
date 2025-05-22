@@ -61,3 +61,9 @@
     
   </div>
 </footer>
+
+</div> <!-- close #page from header.php -->
+
+<?php wp_footer(); ?>
+</body>
+</html>
