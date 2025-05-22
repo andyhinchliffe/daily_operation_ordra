@@ -14,7 +14,7 @@
                     if ($custom_logo_url) {
                         echo '<img src="' . esc_url($custom_logo_url) . '" alt="' . esc_attr__( 'Logo', 'daily_operation_designs' ) . '" class="w-10 h-10 rounded-full object-cover shadow-lg">';
                     } else {
-                        echo '<img src="' . esc_url(get_template_directory_uri() . '/images/placeholderSQ.jpg') . '" alt="' . esc_attr__( 'Default Logo', 'daily_operation_designs' ) . '" class="w-10 h-10 rounded-lg object-cover ">';
+                        echo '<img src="' . esc_url(get_template_directory_uri() . '/images/placeholderSQ.webp') . '" alt="' . esc_attr__( 'Default Logo', 'daily_operation_designs' ) . '" class="w-10 h-10 rounded-lg object-cover ">';
                     }
                 }
                 ?>
