@@ -33,7 +33,7 @@
           />
         <?php else : ?>
           <img
-            src="<?php echo get_template_directory_uri(); ?>/images/placeholder2.jpg"
+            src='<?php echo esc_url( get_template_directory_uri() . "/images/placeholder2.webp" ); ?>'
             alt="Placeholder image"
             class="w-full h-56 object-cover hover:scale-105 transition"
           />

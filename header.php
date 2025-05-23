@@ -33,9 +33,9 @@
                 } else {
                     $custom_logo_url = get_theme_mod('dailyoperationdesigns_custom_logo');
                     if ($custom_logo_url) {
-                        echo '<img src="' . esc_url($custom_logo_url) . '" alt="' . esc_attr__( 'Logo', 'daily_operation_designs' ) . '" class="w-10 h-10 rounded-full object-cover shadow-lg">';
+                        echo '<img src="' . esc_url($custom_logo_url) . '" alt="' . esc_attr__( 'Logo', 'daily_operation_ordra' ) . '" class="w-10 h-10 rounded-full object-cover shadow-lg">';
                     } else {
-                        echo '<img src="' . esc_url(get_template_directory_uri() . '/images/placeholderSQ.webp') . '" alt="' . esc_attr__( 'Default Logo', 'daily_operation_designs' ) . '" class="w-10 h-10 rounded-lg object-cover ">';
+                        echo '<img src="' . esc_url(get_template_directory_uri() . '/images/placeholderSQ.webp') . '" alt="' . esc_attr__( 'Default Logo', 'daily_operation_ordra' ) . '" class="w-10 h-10 rounded-lg object-cover ">';
                     }
                 }
                 ?>
@@ -68,7 +68,7 @@
                     <button 
                         @click="open = !open" 
                         class="text-black hover:text-gray-300 transition w-8 h-8 flex items-center justify-center"
-                        aria-label="<?php esc_attr_e( 'Toggle Search', 'daily_operation_designs' ); ?>"
+                        aria-label="<?php esc_attr_e( 'Toggle Search', 'daily_operation_ordra' ); ?>"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <circle cx="11" cy="11" r="8" />
@@ -80,7 +80,7 @@
                     <button 
                         @click="showMobile = !showMobile" 
                         class="md:hidden bg-black bg-opacity-10 p-2 rounded hover:bg-opacity-20 transition"
-                        aria-label="<?php esc_attr_e( 'Toggle menu', 'daily_operation_designs' ); ?>"
+                        aria-label="<?php esc_attr_e( 'Toggle menu', 'daily_operation_ordra' ); ?>"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -107,7 +107,7 @@
                 <button 
                     @click="showMobile = false" 
                     class="absolute top-16 right-4 text-gray-400 hover:text-gray-300"
-                    aria-label="<?php esc_attr_e( 'Close menu', 'daily_operation_designs' ); ?>"
+                    aria-label="<?php esc_attr_e( 'Close menu', 'daily_operation_ordra' ); ?>"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke=white>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />

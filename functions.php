@@ -1,9 +1,9 @@
 <?php
 // Enqueue Stylesheet
-function mytheme_enqueue_styles() {
+function daily_operation_ordra_enqueue_styles() {
     wp_enqueue_style('tailwindcss', get_template_directory_uri() . '/src/output.css', array(), null);
 }
-add_action('wp_enqueue_scripts', 'mytheme_enqueue_styles');
+add_action('wp_enqueue_scripts', 'daily_operation_ordra_enqueue_styles');
 
 // Enqueue AlpineJS script
 function my_theme_enqueue_alpinejs() {
@@ -11,7 +11,9 @@ function my_theme_enqueue_alpinejs() {
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_alpinejs');
 
-function mytheme_setup() {
+function daily_operation_ordra_setup() {
+
+    add_theme_support( 'automatic-feed-links' );
     // Add support for featured images
     add_theme_support('post-thumbnails');
 
@@ -20,8 +22,8 @@ function mytheme_setup() {
 
     // Register navigation menus
     register_nav_menus(array(
-        'primary' => __('Primary Menu', 'mytheme'),
-        'footer'  => __('Footer Menu', 'mytheme'),
+        'primary' => __('Primary Menu', 'daily_operation_ordra'),
+        'footer'  => __('Footer Menu', 'daily_operation_ordra'),
     ));
     add_theme_support('custom-logo', array(
         'height'      => 400,
@@ -30,7 +32,7 @@ function mytheme_setup() {
         'flex-width'  => true,
     ));
 }
-add_action('after_setup_theme', 'mytheme_setup');
+add_action('after_setup_theme', 'daily_operation_ordra_setup');
 
 function daily_operation_ordra_customize_register( $wp_customize ) {
     // Section for Front Page Button URL (your existing code)
@@ -83,7 +85,7 @@ function daily_operation_ordra_customize_register( $wp_customize ) {
 
     // Image setting and control
     $wp_customize->add_setting( 'front_page_image', array(
-        'default'           => get_template_directory_uri() . '/images/placeholder.jpg', // default image URL
+        'default'           => get_template_directory_uri() . '/images/placeholder.webp', // default image URL
         'sanitize_callback' => 'esc_url_raw',
     ) );
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'front_page_image_control', array(

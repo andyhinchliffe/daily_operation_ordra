@@ -11,11 +11,11 @@ if ( post_password_required() ) {
       <?php
         $comments_number = get_comments_number();
         if ( $comments_number === 1 ) {
-          printf( _x( 'One Comment', 'comments title', 'your-textdomain' ) );
+          printf( _x( 'One Comment', 'comments title', 'daily_operation_ordra' ) );
         } else {
           printf(
             /* translators: %s: number of comments */
-            _nx( '%s Comment', '%s Comments', $comments_number, 'comments title', 'your-textdomain' ),
+            _nx( '%s Comment', '%s Comments', $comments_number, 'comments title', 'daily_operation_ordra' ),
             number_format_i18n( $comments_number )
           );
         }

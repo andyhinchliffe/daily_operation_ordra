@@ -12,9 +12,9 @@
                 } else {
                     $custom_logo_url = get_theme_mod('dailyoperationdesigns_custom_logo');
                     if ($custom_logo_url) {
-                        echo '<img src="' . esc_url($custom_logo_url) . '" alt="' . esc_attr__( 'Logo', 'daily_operation_designs' ) . '" class="w-10 h-10 rounded-full object-cover shadow-lg">';
+                        echo '<img src="' . esc_url($custom_logo_url) . '" alt="' . esc_attr__( 'Logo', 'daily_operation_ordra' ) . '" class="w-10 h-10 rounded-full object-cover shadow-lg">';
                     } else {
-                        echo '<img src="' . esc_url(get_template_directory_uri() . '/images/placeholderSQ.webp') . '" alt="' . esc_attr__( 'Default Logo', 'daily_operation_designs' ) . '" class="w-10 h-10 rounded-lg object-cover ">';
+                        echo '<img src="' . esc_url(get_template_directory_uri() . '/images/placeholderSQ.webp') . '" alt="' . esc_attr__( 'Default Logo', 'daily_operation_ordra' ) . '" class="w-10 h-10 rounded-lg object-cover ">';
                     }
                 }
                 ?>
@@ -33,7 +33,7 @@
                         'link_class' => 'text-sm hover:text-gray-600 transition-colors'
                     ));
                 else :
-                    echo '<a href="#" class="text-sm hover:text-gray-600 transition-colors">' . esc_html__( 'Add a Footer menu in the Appearance section', 'daily_operation_designs' ) . '</a>';
+                    echo '<a href="#" class="text-sm hover:text-gray-600 transition-colors">' . esc_html__( 'Add a Footer menu in the Appearance section', 'daily_operation_ordra' ) . '</a>';
                 endif;
             ?>
         </div>
@@ -42,16 +42,16 @@
     <!-- Copyright Notice -->
         <div class="mt-4 text-xs text-gray-400">
             <p class="text-center text-xs text-gray-400">
-                &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. <?php esc_html_e( 'All rights reserved.', 'daily_operation_designs' ); ?>
+                &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. <?php esc_html_e( 'All rights reserved.', 'daily_operation_ordra' ); ?>
             </p>
             <?php
             printf(
-                __('Theme by <a href="%s" target="_blank" class="text-center text-xs text-gray-400 hover:underline">Daily Operation Designs</a>', 'daily_operation_designs'),
+                __('Theme by <a href="%s" target="_blank" class="text-center text-xs text-gray-400 hover:underline">Daily Operation Designs</a>', 'daily_operation_ordra'),
                 esc_url('https://designs.dailyoperation.uk')
             );
 
             printf(
-                __(' Licensed under <a href="%s" target="_blank" class="text-center text-xs text-gray-400   hover:underline">GPLv2</a>', 'daily_operation_designs'),
+                __(' Licensed under <a href="%s" target="_blank" class="text-center text-xs text-gray-400   hover:underline">GPLv2</a>', 'daily_operation_ordra'),
                 esc_url('https://www.gnu.org/licenses/gpl-2.0.html')
             );
             ?>
