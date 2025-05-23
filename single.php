@@ -47,6 +47,18 @@
 
       </div> <!-- End Post Wrapper -->
 
+      <?php
+      // Display post tags
+      if ( has_tag() ) {
+          echo '<div class="post-tags mb-6 text-sm text-gray-600">';
+          echo '<strong>' . __('Tags:', 'daily_operation_ordra') . '</strong> ';
+          the_tags('', ', ', '');
+          echo '</div>';
+      }
+      ?>
+
+      <?php comments_template(); ?>
+
     <?php endwhile; else : ?>
       <p class="text-center text-gray-500">Sorry, no content found.</p>
     <?php endif; ?>

@@ -5,6 +5,14 @@ function daily_operation_ordra_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'daily_operation_ordra_enqueue_styles');
 
+function daily_operation_ordra_enqueue_comment_reply_script() {
+    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+        wp_enqueue_script( 'comment-reply' );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'daily_operation_ordra_enqueue_comment_reply_script' );
+
+
 // Enqueue AlpineJS script
 function my_theme_enqueue_alpinejs() {
     wp_enqueue_script('alpinejs', 'https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js', array(), null, true);
@@ -12,6 +20,29 @@ function my_theme_enqueue_alpinejs() {
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_alpinejs');
 
 function daily_operation_ordra_setup() {
+
+    add_theme_support( 'html5', array(
+    'search-form',
+    'comment-form',
+    'comment-list',
+    'gallery',
+    'caption',
+    'style',
+    'script',
+) );
+
+add_theme_support( 'wp-block-styles' );
+
+add_theme_support( 'responsive-embeds' );
+
+add_theme_support( 'align-wide' );
+
+add_editor_style( 'src/output.css' );
+
+
+
+
+
 
     add_theme_support( 'automatic-feed-links' );
     // Add support for featured images
