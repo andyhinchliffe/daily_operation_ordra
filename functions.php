@@ -73,7 +73,7 @@ function daily_operation_ordra_customize_register( $wp_customize ) {
     ) );
 
     $wp_customize->add_setting( 'front_page_button_url', array(
-        'default'           => get_permalink( get_page_by_path('about') ), // default to About page permalink
+        'default'           => get_permalink( get_page_by_path('#') ), // default to # 
         'sanitize_callback' => 'esc_url_raw',
     ) );
 

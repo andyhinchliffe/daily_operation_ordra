@@ -52,7 +52,7 @@
 <div class="mt-10 md:mt-0">
   <div class="grid gap-4">
     <img
-      src="<?php echo $image_path; ?>"
+      src='<?php echo esc_url($image_path); ?>'
       alt="Product demo or dashboard screenshot"
       class="w-full rounded-2xl object-cover"
     />
